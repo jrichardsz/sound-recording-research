@@ -1,0 +1,134 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    font: 10pt Arial, sans-serif;
+    /* background: lightgrey; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    height: 100vh;
+    width: 100%;
+    margin: 0 0;
+    zoom: 3; 
+    -moz-transform: scale(3); 
+    -moz-transform-origin: 0 0;    
+}
+
+p {
+    margin: 2px;
+}
+
+#analyser {
+    display: inline-block;
+    background: #202020;
+    width: 100%;
+    height: 95px;
+    box-shadow: 0px 0px 10px blue;
+}
+
+#wavedisplay {
+    display: inline-block;
+    background: #ffffff;
+    overflow-y: scroll;
+    width: 95%;
+    height: 45%;
+    box-shadow: 0px 0px 10px blue;
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 20%;
+    width: 100%;
+}
+
+#record {
+    height: 11vh;
+}
+
+#record.recording {
+    background: red;
+    background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%, lightgrey 75%, lightgrey 100%, #7db9e8 100%);
+    background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%, lightgrey 75%, lightgrey 100%, #7db9e8 100%);
+    background: radial-gradient(center, ellipse cover, #ff0000 0%, lightgrey 75%, lightgrey 100%, #7db9e8 100%);
+}
+
+#save,
+#save img {
+    height: 10vh;
+}
+
+#save {
+    opacity: 0.25;
+}
+
+#save[download] {
+    opacity: 1;
+}
+
+#viz {
+    height: 200px;
+    width: 100%;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (orientation: landscape) {
+    body {
+        flex-direction: row;
+    }
+
+    #controls {
+        flex-direction: column;
+        height: 100%;
+        width: 10%;
+    }
+
+    #viz {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.cell {
+    /* height: 5px; */
+    text-align: center
+}
+
+.row > div {
+    min-height: 100px;
+}
+.row .pink {
+    /* background: pink; */
+}
+.row .green {
+    /* background: lightgreen; */
+}
+.row .blue {
+    background-image: url(https://www.jattimg.com/i/2015/01/14/awesome_tigere5a05.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 200px;
+}
+
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+}
+
+table thead tr th {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+}

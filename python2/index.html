@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="./assets/style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <button id="start_round" type="button" class="block">Start Round</button>
+        <p id="uuid" style="text-align: center;">&nbsp;</p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="rows">
+
+                <div id="wizard_img_container" >
+                    <img src="./assets/wizard.png" style="width: 45%;">
+                </div>
+                <div>
+                    <table id="player_information" border="1"
+                        style="width: 100%;text-align: center;height: fit-content;">
+                        <thead style="height: 5px;">
+                            <tr>
+                                <td>HP</td>
+                                <td>FIRE</td>
+                                <td>WATER</td>
+                                <td>PLANT</td>
+                                <td>DARK</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin: 10px;">
+                    <label for="runes">Replicate these runes:</label>
+                    <p id="runes_to_cast" style="text-align: center;margin-top: 10px;">* * * * * *</p>
+                    <input name="runes" id="runes" style="width: 100%;"/>
+                </div>                
+                <div style="margin: 10px;">
+                    <label for="cars">Choose a spell type:</label>
+                    <br>
+                    <select name="spell_type" id="spell_type" style="width: 100%;">
+                        <option value="1">attack</option>
+                        <option value="2">heal</option>
+                        <option value="3">shield</option>
+                    </select>
+                </div>
+                <div style="margin: 10px;">
+                    <label for="cars">Choose the Level:</label>
+                    <br>
+                    <select name="spell_level" id="spell_level" style="width: 100%;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                    </select>
+                </div>
+                <div style="margin: 10px;">
+                    <img id="record" src="./assets/mic128.png"
+                        onclick="toggleRecording(this);" style="width: 25%;">
+                </div>
+
+            </div>
+        </div>
+        <div class="column"></div>
+        <div class="column">
+            <div id="creature_img_container" >
+                <img src="./assets/creature.png" style="width: 45%;">
+            </div>
+            <table id="creature_information" border="1" style="width: 100%;text-align: center;height: fit-content;">
+                <thead style="height: 5px;">
+                    <tr>
+                        <td>HP</td>
+                        <td>FIRE</td>
+                        <td>WATER</td>
+                        <td>PLANT</td>
+                        <td>DARK</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.3/socket.io.js"></script>
+    <script src="./assets/main.js"></script>
+
+</body>
+
+</html>
